@@ -1,6 +1,45 @@
 <!DOCTYPE html>
-<head>
-</head>
-<body>
-	<p></p>
-<script src="rps.js"></script>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/rps.css">
+	</head>
+	<body>
+		<div class="col">
+			<div id="countdown">
+				<h6 class = 'set' id='num'></h6>
+			</div>
+			<div class="row title">
+				<h1>ROCK vs PAPER vs SCISSORS</h1>
+			</div>
+			<div class="row">
+				<h2>Choose wisely!</h2>
+			</div>
+			<div class="row">
+				<button class='btn' id='rock'><img src="assets/rock.jpg" /></button>
+				<button class='btn' id='paper'><img src="assets/paper.jpg" /></button>
+				<button class='btn' id='scissors'><img src="assets/scissors.jpg" /></button>
+			</div>
+			<div class="row" id="selection">
+				<p id='pSelection'></p>
+				<p id='cSelection'></p>
+			</div>
+			<div class="row">
+<!-- Scoring -->
+				<h2>Player:</h2>
+				<h3 id="playerScore" class="scores">0</h3>
+				<h2>vs</h2>
+				<h2>Computer:</h2>
+				<h3 id="computerScore" class="scores">0</h3>				
+			</div>
+		</div>
+	</body>
+	<footer class="row footer">
+		<p>Round:</p>
+		<h3 class="round" id="currentRound">0</h3>
+	</footer>
+</html>
+
+
+<script src="js/rps.js"></script>
