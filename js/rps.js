@@ -4,7 +4,7 @@ let compScore = 0;
 let roundCount = 1;
 let result;
 
-
+//Reset for a new round
  function reset() {
 	const pSelection = document.getElementById('pSelection');
 	const pScore = document.getElementById('playerScore');
@@ -25,6 +25,7 @@ let result;
 	playerButton.forEach(key => key.addEventListener('click', chooseWeapon));
 }; 
 
+//Reset for new game, resets scores and round
 function fullReset() {
 	 window.removeEventListener('click', fullReset);
 	 
@@ -40,7 +41,8 @@ function fullReset() {
 	 roundCount = 1;
 };
 
-function announceWinner() {       //Set winner and raise score
+//Set winner and raise score
+function announceWinner() {
 	const announcement = document.getElementById('num');
 	const pScore = document.getElementById('playerScore');
 	const cScore = document.getElementById('computerScore');
@@ -96,10 +98,8 @@ function announceWinner() {       //Set winner and raise score
 	}
 };
 	
-
-
-
-function showChoice() {  //Shows the player and computer choices
+//Shows the player and computer choices
+function showChoice() {
 	const announcement = document.getElementById('num');
 
 	compRandom = Math.floor(Math.random() * 3 + 1);   //* Randomly get a computer selection of either Rock, Paper, or Scissors
